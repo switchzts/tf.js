@@ -174,7 +174,10 @@ return tf.tidy(()=>{
 //load the model 
 async function loadModel()
 {
+    window.alert(“what？？”)
     model = await tf.loadModel('model/model.json')
+	
+    window.alert(“what？？222”)
     //warm up 
     model.predict(tf.zeros([1,28,28,1]))
     allowDrawing()
