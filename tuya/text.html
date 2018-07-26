@@ -36,17 +36,23 @@ function setTable(top5, probs)
 	  
  //prepare the drawing canvas 
 $(function () {
-    window.alert(5 + 6);
     loadModel();
+    window.alert(5 + 6);
     canvas = window._canvas = new fabric.Canvas('canvas');
+    window.alert(5 + 6);
     canvas.backgroundColor = '#ffffff';
     canvas.isDrawingMode= 0;
     canvas.freeDrawingBrush.color = "black";
     canvas.freeDrawingBrush.width = 10;
+    window.alert(5 + 6);
     canvas.renderAll();
+    window.alert(5 + 6);
     canvas.on('mouse:up', function(e){getFrame(); mousePressed = false});
+    window.alert(5 + 6);
     canvas.on('mouse:down', function(e){mousePressed = true});
+    window.alert(5 + 6);
     canvas.on('mouse:move', function(e){recordCoor(e)});
+    window.alert(5 + 6);
 })
 	  
 //record the current drawing coordinates 	  
@@ -176,10 +182,7 @@ return tf.tidy(()=>{
 //load the model 
 async function loadModel()
 {
-    window.alert(“what？？”);
     model = await tf.loadModel('model/model.json');
-	
-    window.alert(“what？？222”);
     //warm up 
     model.predict(tf.zeros([1,28,28,1]));
     allowDrawing();
@@ -202,7 +205,6 @@ function erase()
 }
 	  
 loadModel();
-window.alert(“wsdadahat？？”) ;
 var model;
 var canvas;
 var symbols = [{}];
