@@ -36,6 +36,7 @@ function setTable(top5, probs)
 	  
  //prepare the drawing canvas 
 $(function () {
+    loadModel();
     canvas = window._canvas = new fabric.Canvas('canvas');
     canvas.backgroundColor = '#ffffff';
     canvas.isDrawingMode= 0;
@@ -174,14 +175,14 @@ return tf.tidy(()=>{
 //load the model 
 async function loadModel()
 {
-    window.alert(“what？？”)
-    model = await tf.loadModel('model/model.json')
+    window.alert(“what？？”);
+    model = await tf.loadModel('model/model.json');
 	
-    window.alert(“what？？222”)
+    window.alert(“what？？222”);
     //warm up 
-    model.predict(tf.zeros([1,28,28,1]))
-    allowDrawing()
-    await loadDict()
+    model.predict(tf.zeros([1,28,28,1]));
+    allowDrawing();
+    await loadDict();
 }
 	  
 //allow drawing on canvas 	  
@@ -199,8 +200,8 @@ function erase()
     coords = [] ;
 }
 	  
-loadModel()
-window.alert(“wsdadahat？？”) 
+loadModel();
+window.alert(“wsdadahat？？”) ;
 var model;
 var canvas;
 var symbols = [{}];
